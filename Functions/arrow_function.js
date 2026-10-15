@@ -33,6 +33,14 @@ one()
 
 // Arrow function
 
-const two = (a,b) => a + b // it returns the value implicitly as there is only one expression we do not have to use return statement
-
+const two = (a,b) => (a + b)
+ // it returns the value implicitly as there is only one expression we do not have to use return statement
+// if we write the expression in () then we do not have to write return statement but if in {} then return statement is needed
 console.log(two(3,4))
+
+const three = (a,b) => ({name : "Bhoomi"})
+// if we want to return object we have to write it inside ({ }) otherwise it will return undefined
+
+console.log(three(3,4))
+
+//Parentheses around a single parameter are optional. However, zero or multiple parameters require parentheses.
