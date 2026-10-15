@@ -9,3 +9,4 @@
 //IIFE using Arrow function
 
 ((name) => {console.log(`Hello ${name}`) })("Bhoomi"); 
+
