@@ -6,7 +6,7 @@ function scope(){
     let b = 20
     var c = 30
 
-    console.log(first); 
+    console.log("Inner ", first); 
 }
 scope();
 console.log(c);// QUESTION
@@ -21,7 +21,23 @@ console.log(c);// QUESTION
  }
 //console.log(a);
 //console.log(b);
-console.log(c);
+console.log(c); //Printed
+
+if(true){
+    const FirstName = "Bhoomika "
+    if(true){
+        const lastName = "Rathod"
+        console.log(FirstName + lastName);
+        
+    }
+    console.log(lastName);  // this can not be printed as the access is out of the scope
+
+}
+console.log(FirstName); // same as above
+
+
+
+
 
 
 
