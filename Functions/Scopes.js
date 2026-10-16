@@ -9,7 +9,7 @@ function scope(){
     console.log("Inner ", first); 
 }
 scope();
-console.log(c);// QUESTION
+console.log(c);// var c will not be accessible outside the function as the function crates its own scope
 
 //console.log(a); // a will not be printed as const is a blocked scope variable
 //console.log(b); // b also not printes as let is also a blocked scope variable
@@ -21,19 +21,21 @@ console.log(c);// QUESTION
  }
 //console.log(a);
 //console.log(b);
-console.log(c); //Printed
+console.log(c); //conditional statements do not have their own scope
 
 if(true){
     const FirstName = "Bhoomika "
     if(true){
         const lastName = "Rathod"
-        console.log(FirstName + lastName);
+        console.log(FirstName + lastName); // this will print as it is under the scope
         
     }
     console.log(lastName);  // this can not be printed as the access is out of the scope
 
 }
-console.log(FirstName); // same as above
+console.log(FirstName); // same as above, not printed
+
+
 
 
 

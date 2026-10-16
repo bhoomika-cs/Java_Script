@@ -21,6 +21,4 @@ let score = 11
 do {
     console.log(`the value is ${score}`); // do while prints the statement atleast one even if the condition is false
     score++
-    
-    
 } while (score <= 10);

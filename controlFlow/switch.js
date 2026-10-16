@@ -8,7 +8,6 @@
 //     default :
 //     break
 // }
-
 const score = 30
 
 switch(score){
@@ -28,7 +27,6 @@ switch(score){
         console.log("A++ grade");
         break;
     default :
-    console.log("FAIL");
-    
-        
+    console.log("FAIL");      
 }
+
