@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: rgb(29, 27, 27); color: white;">
+    <script>
+    function createDiv(){
+        const div = document.createElement('div') // createElement is used to create an element 
+        console.log(div);
+        div.className = "main"
+        div.id = "myid"
+        div.setAttribute("name", "hello") // used to create customised attributes
+        div.style.backgroundColor = "Orange"
+        div.style.padding = "20px"
+        div.innerText = "Hello Everyone!" //used to add text 
+
+        const addtext = document.createTextNode("Hello People!!") // another way to add text
+        div.appendChild(addtext)
+
+        document.body.appendChild(div) // attach the element to the page and make it visible on page
+    }
+    createDiv()
+
+    
+
+
+
+    </script>
+</body>
+</html>
