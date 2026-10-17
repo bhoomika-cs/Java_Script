@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-3</title>
+</head>
+<body style="background-color: rgb(37, 35, 35); color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(LangName){
+        const li = document.createElement('li') //creates element
+        li.innerHTML = `${LangName}` // adds text to the element
+        document.querySelector('.language').appendChild(li) // attaches the element to the page
+ 
+    }
+    addLanguage("Python") // passes the value in argument
+    addLanguage("Java")
+</script>
+</html>
