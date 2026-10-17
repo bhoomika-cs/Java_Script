@@ -16,9 +16,32 @@
         const li = document.createElement('li') //creates element
         li.innerHTML = `${LangName}` // adds text to the element
         document.querySelector('.language').appendChild(li) // attaches the element to the page
- 
     }
     addLanguage("Python") // passes the value in argument
     addLanguage("Java")
+
+    function addLangOpti(LangName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(LangName))
+        document.querySelector(".language").appendChild(li) //more Optimised approach
+    } 
+    addLangOpti("Ruby")
+
+    //Edit
+    const selectLang = document.querySelector('li:nth-child(2)') //selects the 2nd element 
+    const newli = document.createElement('li')  //creates new list element
+    newli.textContent= "C++" //adds text to the list
+    selectLang.replaceWith(newli) //replaces the previous li with new
+
+    //edit 2
+
+    const thirdLang = document.querySelector('li:nth-child(3)')
+    thirdLang.outerHTML= '<li>TypeScript</li>'
+
+    //Remove
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
 </script>
 </html>
