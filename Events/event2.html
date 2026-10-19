@@ -6,10 +6,12 @@
     <title>Events in JS</title>
 </head>
 <body>
+    <div id="div">
     <button id="btn" onclick="changetext()">click me</button>
     <p id="p1">Hello Everyone</p>
-
     <input id="input" type="text" placeholder="Type here">
+    <a id="link" href="http://google.com/">Google</a>
+    </div>
     
 </body>
 <script>
@@ -21,8 +23,25 @@
         document.querySelector('#p1').innerHTML = 'Button clicked!!'; //changes the text displaying on screen when button is clicked
     }
 
-    document.getElementById('btn').addEventListener('input', () => {
+    document.getElementById('input').addEventListener('input', () => {
         console.log('You are typing..');
+        
+    })
+
+    document.getElementById('div').addEventListener('click', function(e){ 
+        console.log(e.target.tagName);  //prints targeted tag name
+        console.log(e.currentTarget.tagName); //prints current target   
+    })
+
+    document.getElementById('link').addEventListener('click', function(e){
+        e.preventDefault();
+        console.log("prevented");
+        
+    })
+
+    document.getElementById('btn').addEventListener('click', function(e){
+        console.log("X :- ", e.clientX); //horizontal
+        console.log("Y :- ", e.clientY); //vertical
         
     })
 

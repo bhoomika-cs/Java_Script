@@ -38,11 +38,19 @@
     create("How are you")
 
     //remove element
+    // const remove = document.querySelector('#para')
+    // remove.remove()
 
-    const remove = document.querySelector("#div")
-    remove.remove()
+    //remove child
+    const removeIt = document.querySelector('#div1')
+    removeIt.removeChild(para)
+    console.log('child removed');
 
+    //set attribute
+    const div = document.getElementById('div1')
+    div.setAttribute("name", "Div-1")
 
-
+    console.log(div)
+    
 </script>
 </html>
