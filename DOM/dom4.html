@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4</title>
+</head>
+<body id = "body">
+    <div id="div1">
+    <h1 id="h1">Helloo Everyone</h1> 
+    <p id="para">Lorem ipsum dolor sit.</p>  
+    </div> 
+</body>
+<script>
+    //Changes the color of h1
+    document.getElementById('h1').style.color="red" 
+
+    //change bg color 
+    document.getElementById('body').style.backgroundColor = "skyblue"
+
+    //change content of paragraph
+    const para = document.getElementById('para')
+    console.log(para.innerHTML = "<h1>This is a paragraph.</h1>"); //innerHTML treats it as HTML element not just text
+    
+    //create new element
+    const h1 = document.createElement('h1')
+    h1.innerHTML= "Hellooo!!"
+    document.querySelector('#div1').appendChild(h1)
+
+    //create element using function
+    function create(input){
+    const h1 = document.createElement('h1')
+    h1.innerHTML= `${input}`
+    document.querySelector('#div1').appendChild(h1)
+    console.log("input added");
+    }
+    create("Hello Everyone")
+    create("How are you")
+
+    //remove element
+
+    const remove = document.querySelector("#div")
+    remove.remove()
+
+
+
+</script>
+</html>
