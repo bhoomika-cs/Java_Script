@@ -76,7 +76,7 @@ console.log(another_arr);
 
 //isArray() -> used to check whether the variable is array or not
 
-console.log(Array.isArray("Bhoomi"));
+console.log(Array.isArray(arr));
 
 //from() -> used to convert into array
 

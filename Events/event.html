@@ -1,0 +1,61 @@
+<!--EVENTS IN JAVASCRIPT-->
+<!--Events are things that happen in the system you are programming, which the system tells
+ you about so your code can react to them. For example, if the user clicks a button on a webpage,
+ you might want to react to that action by displaying an information box.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body style="background-color:rgb(213, 98, 57); color: white;">
+    <ul id="images">
+        <li id="img1"><img width = "300px" height="auto" src="/Events/tangled.jpg" ></li>
+        <li id="img2"><img width = "300px" height="auto" src="/Events/lock.jpg"></li>
+        <li id="link"><a href="https://www.google.com/" style="color: white;">Google</a></li>
+        
+    </ul>
+</body>
+<script>
+    // document.getElementById("img1").onclick = function(){ //not a good approach
+    //     alert("Image 1 Clicked");  
+    // }
+    //Main events to learn
+    //type, timestamp, preventDefault
+    //target, toElement, srcElement, currentTarget
+    //clientX, ClientY, screenX, screenY
+    //altkye, ctrlkey, shiftkey, keycode
+
+    //second approach
+
+    // document.getElementById("images").addEventListener('click', function(){
+    //     alert('Clicked')
+    // })
+    // document.getElementById("images").addEventListener('click', function(e){
+    //     console.log('Clicked inside ul');
+    // },false) 
+
+    // document.getElementById("img1").addEventListener('click', function(e){
+    //     console.log('Clicked image 1');
+    //     e.stopPropagation() //prevents bubbling up
+    // },false)
+
+    // document.getElementById('link').addEventListener('click', function(e){
+    //    e.preventDefault()
+    //    console.log('google clicked');
+        
+    // })
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            
+            let removeIt = e.target.parentNode
+            removeIt.remove() 
+        }
+    })
+</script>
+</html>
